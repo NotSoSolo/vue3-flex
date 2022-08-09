@@ -7,7 +7,9 @@
         align-items="center"
         justify-content="center"
     >
-
+        <h1>
+            Hello world!
+        </h1>
     </flex>
 </template>
 
