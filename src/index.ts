@@ -1,7 +1,7 @@
 import { App } from 'vue'
 import Flex from './Flex.vue'
 
-export { Flex }
+export default Flex;
 
 export function install(app: App, options: { name: string }) {
   const finalOptions = Object.assign(
@@ -21,4 +21,4 @@ const plugin = {
   install,
 }
 
-export default plugin
+// export default plugin
