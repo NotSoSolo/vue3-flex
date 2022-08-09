@@ -1,0 +1,63 @@
+{
+  "name": "vue3-flex",
+  "version": "0.0.10",
+  "license": "MIT",
+  "author": "Jochem Hagenaars <jochem@notsosolo.app> (https://notsosolo.app)",
+  "scripts": {
+    "dev": "vue-cli-service serve dev/serve.ts",
+    "build": "vite build && tsc -d --emitDeclarationOnly && vue-typegen gen -s ./src -o ./dist",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint \"{packages,playground}/**/*.{ts,tsx,vue,js,jsx,html}\"",
+    "prettier": "npx prettier --write ."
+  },
+  "peerDependencies": {
+    "vue": "^3.2"
+  },
+  "files": [
+    "dist",
+    "dist/*.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NotSoSolo/vue3-flex.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "dist/vue3-flex.umd.js",
+  "module": "dist/vue3-flex.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue3-flex.es.js",
+      "require": "./dist/vue3-flex.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "devDependencies": {
+    "@babel/types": "7.18.10",
+    "@types/node": "17.0.19",
+    "@vitejs/plugin-vue": "2.3.3",
+    "sass": "^1.54.3",
+    "typescript": "4.7.4",
+    "vite": "2.9.14",
+    "vue": "3.2.37",
+    "vue-tsc": "0.39.5",
+    "vue-typegen": "0.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/NotSoSolo/vue3-flex/issues",
+    "email": "jochem@notsosolo.app"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "homepage": "https://github.com/NotSoSolo/vue3-flex",
+  "keywords": [
+    "vue3",
+    "vue",
+    "flex",
+    "flexbox"
+  ]
+}
