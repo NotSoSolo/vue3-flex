@@ -5,6 +5,7 @@
             'flex-wrapper--inline': inline
         }"
         :style="({
+            display: inline ? 'inline-flex' : 'flex',
             flexDirection: direction,
             justifyContent: justifyContent,
             alignItems: alignItems,
@@ -60,13 +61,3 @@ const getGap = computed(() => {
 });
 
 </script>
-
-<style lang="scss" scoped>
-.flex-wrapper {
-    display: flex;
-
-    &--inline {
-        display: inline-flex;
-    }
-}
-</style>
