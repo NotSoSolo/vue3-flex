@@ -17,5 +17,4 @@
 import { Flex } from 'vue3-flex';
 
 </script>
-
-`
+```
